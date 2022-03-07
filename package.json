@@ -1,0 +1,22 @@
+{
+  "name": "jwtexamples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example-self-encode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slyke/JWT-Exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slyke/JWT-Exercise/issues"
+  },
+  "homepage": "https://github.com/Slyke/JWT-Exercise#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
+}
