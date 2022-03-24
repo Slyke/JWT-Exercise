@@ -1,4 +1,4 @@
-const fs = require('fs'); ); // Import filesystem library.
+const fs = require('fs'); // Import filesystem library.
 const jwt = require('jsonwebtoken'); // Import JWT library
 
 // Construct the object we want in the JWT
@@ -8,11 +8,13 @@ const payload = {
 };
 
 // Load the private key into a variable so that it can be accessed in memory
-var privateKey = fs.readFileSync('./certs/jwtRS256.key.pub');  // get private key
+var privateKey = fs.readFileSync('./certs/jwtRS256.key');  // get private key
 
-// Use the library to generate our JWT. The line that’s commented out will generate a JWT that never expires. Specifying the algorithm is important when using asymmetric algorithms
-const signedToken = jwt.sign(payload, privateKey, { algorithm: 'RS256'});
-// const signedToken = jwt.sign(payload, psk, { expiresIn: 30, { algorithm: 'RS256'} });
+// Create the JWT and sign it with the private key
+const signedToken = jwt.sign(payload, privateKey, { algorithm: 'RS256' });
+
+// Example of setting the JWT to expire after 30 seconds
+// const signedToken = jwt.sign(payload, psk, { expiresIn: 30, algorithm: 'RS256' });
 
 // Output result
 console.log({

@@ -22,10 +22,10 @@ node backyard-jwts/jwt-parts.js
 
 This will encode and correctly sign a JWT with a psk.
 ```
-node encode-psk.js {PSK=asdf}
+node encode-psk.js {PSK=password}
 ```
 
-This will encode and sign a JWT with a asymmetric key pair (aka "ssl certs", "private public keypair"). Ensure you've generated your keypairs before running.
+This will encode and sign a JWT with an asymmetric key pair (aka "ssl certs", "private public keypair"). Ensure you've generated your keypairs before running.
 
 ```
 node encode-asym.js
@@ -35,12 +35,12 @@ node encode-asym.js
 
 ### Using the jsonwebtoken npm module.
 
-This will encode and correctly sign a JWT with a psk.
+This will decode a signed a JWT with a psk.
 ```
-node decode-psk.js {PSK=asdf}
+node decode-psk.js {PSK=password}
 ```
 
-This will encode and sign a JWT with a asymmetric key pair (aka "ssl certs", "private public keypair").
+This will decode a signed JWT with an asymmetric key pair (aka "ssl certs", "private public keypair").
 
 ```
 node decode-asym.js {TOKEN}
